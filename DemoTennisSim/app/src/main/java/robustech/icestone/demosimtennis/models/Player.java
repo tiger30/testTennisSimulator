@@ -1,18 +1,26 @@
 package robustech.icestone.demosimtennis.models;
 
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by IceStone on 4/17/2016.
  */
 public class Player {
-    private String name;
-    private HashMap<TennisGame, List<GameSet>> mapGameScore;
 
-    public Player(String name, HashMap<TennisGame, List<GameSet>> mapGameScore) {
+    public static final List<String> pointsDescription = Arrays.asList("love", "fifteen", "thirty", "forty");
+
+    String name;
+    private int score;
+
+
+    public Player(String name, int score) {
         this.name = name;
-        this.mapGameScore = mapGameScore;
+        this.score = score;
+    }
+
+    public Player(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -23,11 +31,21 @@ public class Player {
         this.name = name;
     }
 
-    public HashMap<TennisGame, List<GameSet>> getMapGameScore() {
-        return mapGameScore;
+    public int getScore() {
+        return score;
     }
 
-    public void setMapGameScore(HashMap<TennisGame, List<GameSet>> mapGameScore) {
-        this.mapGameScore = mapGameScore;
+    public void setScore(int score) {
+        this.score = score;
     }
+
+    public void winBall() {
+        this.score = this.score + 1;
+    }
+
+
+    public String getScoreDescription(){
+        return pointsDescription.get(score);
+    }
+
 }
