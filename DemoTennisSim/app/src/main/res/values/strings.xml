@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DemoSimTennis</string>
+    <string name="btnStart">START</string>
+    <string name="tv_total_player">Total player in the tournament:</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/md_orange_500" />
+    <item>
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/background"/>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/ic_tennis_icon" />
+    </item>
+
+</layer-list>
